@@ -83,10 +83,10 @@ class ApiController extends Controller
 
         }
 
-        return json_decode($response);
+        /*return json_decode($response);*/
 
-//        $pixel = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==";
+        $pixel = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z/C/HgAGgwJ/lK3Q6wAAAABJRU5ErkJggg==";
 
-//        return '<img src="'. $pixel .'"></img>';
+        return '<img width="1px" height="1px" src="'. $pixel .'"/>';
     }
 }
