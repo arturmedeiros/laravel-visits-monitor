@@ -63,7 +63,7 @@ class ApiController extends Controller
                         ],
                         [
                             "type" => "mrkdwn",
-                            "text" => "*Developer by:*\n<https://github.com/arturmedeiros/laravel-visits-notifications|@arturmedeiros>"
+                            "text" => "*Developer by:*\n<https://github.com/arturmedeiros/laravel-visits-monitor|@arturmedeiros>"
                         ],
                     ]
                 ],
