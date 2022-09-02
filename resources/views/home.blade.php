@@ -211,7 +211,7 @@
                 </button>
             </div>
         </div>
-        <p class="mt-5 mb-3 text-muted text-center">&copy; 2022 - @arturmedeiros - <a target="_blank" href="https://github.com/arturmedeiros/laravel-visits-monitor"><b>GitHub</b></a></p>
+        <p class="mt-5 mb-3 text-muted text-center">&copy; {{ now()->format('Y') }} - @arturmedeiros - <a target="_blank" href="https://github.com/arturmedeiros/laravel-visits-monitor"><b>GitHub</b></a></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.10"></script>
