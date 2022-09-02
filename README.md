@@ -9,7 +9,7 @@
 </p>
 
 
-# 📬 Visits Monitor - Laravel + Slack Integration
+# 📬  Visits Monitor - Laravel + Slack Integration
 ### Receive notifications when you receive visits on _GitHub_!
 
 Já pensou em ser avisado sempre que alguém acessar o seu GitHub? Com essa aplicação OpenSource você recebe notificações via Slack sempre que tiver um novo visitante!
@@ -21,7 +21,7 @@ Basta possuir uma conta no [Slack](https://slack.com/) e seguir os passos à seg
 <img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/012.png" width="100%">
 </p>
 
-## 🌎 Live Project
+## 🌎  Live Project
 Para instalar o Monitor de Visitas ao seu perfil do GitHub, basta colar o código que geramos na [ nossa página](https://visits-monitor.herokuapp.com/). Veja abaixo como utilizar.
 
 ### 1) Criando um novo canal no Slack
@@ -77,7 +77,7 @@ Agora, escolha para qual canal o webhook deve disparar a notificação. No exemp
 Pronto! Agora o Slack lhe mostrará o endpoint do seu webhook. Basta copiar esse link e seguir para os passos finais dessa integração.
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/0013.png" width="400">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/013.png" width="400">
 </p>
 
 ### 4) Obtendo código do Rastreio e Monitoramento do seu GitHub
