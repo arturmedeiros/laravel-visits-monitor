@@ -18,7 +18,7 @@ Basta possuir uma conta no Slack e seguir os passos à seguir.
 
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/012.png" width="400">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/012.png" width="100%">
 </p>
 
 ## Live Project
