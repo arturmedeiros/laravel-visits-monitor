@@ -2,6 +2,13 @@
 
 
 
+<p align="center">
+
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/favicon.png" width="120">
+
+</p>
+
+
 # 📬 Visits Monitor - Laravel + Slack Integration
 ### Receive notifications when you receive visits on _GitHub_!
 
@@ -9,39 +16,96 @@ Já pensou em ser avisado sempre que alguém acessar o seu GitHub? Com essa apli
 
 Basta possuir uma conta no Slack e seguir os passos à seguir.
 
-## Live Project
-Para instalar o Monitor de Visitas ao seu perfil do GitHub, basta colar o código que geramos na nossa página. Veja abaixo como utilizar.
 
-### Criando um novo canal no Slack
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/012.png" width="400">
+</p>
+
+## Live Project
+Para instalar o Monitor de Visitas ao seu perfil do GitHub, basta colar o código que geramos na [ nossa página](https://visits-monitor.herokuapp.com/). Veja abaixo como utilizar.
+
+### 1) Criando um novo canal no Slack
 
 Primeiro, você precisa ter um canal que receberá as notificações via webhook. Para isso, basta clicar no ícone + e selecionar a opção "Criar um canal".
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/001.png" width="400">
+</p>
+
+Informe o nome do seu novo canal. No exemplo, usamos "github-monitor". Além disso, marque a opção "Tornar privado" para garantir maior segurança:
 
 <p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/002.png" width="400">
+</p>
 
-<img src="public/IMGS/001.png" width="400">
+### 2) Ativar Integração com Webhooks
 
+Depois de criar o canal, você deve criar um novo Webhook para seu canal. Para isso, clique com o botão direito sob o nome do novo canal e selecione a opção "Ver detalhes do canal".
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/003.png" width="400">
+</p>
+
+Em seguida, clique no botão "Adicionar um app".
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/004.png" width="400">
 </p>
 
 
-## Learning Laravel
+No campo de busca, procure por "Incoming Webhooks" e clique em "Instalar".
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/005.png" width="400">
+</p>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Clique para adicionar os Webhooks de Entrada ao seu canal.
 
-## Contributing
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/006.png" width="400">
+</p>
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+Agora, escolha para qual canal o webhook deve disparar a notificação. No exemplo, o nome do canal é "github-monitor", e em seguida clique em "Adicionar Integração com o Webhook de entrada".
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/007.png" width="400">
+</p>
 
-## Security Vulnerabilities
+### 3) Obtendo endpoint do Webhook de Entrada
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Pronto! Agora o Slack lhe mostrará o endpoint do seu webhook. Basta copiar esse link e seguir para os passos finais dessa integração.
 
-## License
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/0013.png" width="400">
+</p>
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4) Obtendo código do Rastreio e Monitoramento do seu GitHub
+
+Basta colar o link do seu webhook na nossa página e clicar no botão "Gerar código da imagem!".
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/008.png" width="400">
+</p>
+
+Em seguida, você verá o código de rastreio. Copie o código e siga o último passo.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/009.png" width="400">
+</p>
+
+### 5) Implementando o código de Monitoramento
+
+Agora, você deve abrir o "README.md" do seu projeto de apresentação, ou qualquer outro que queira monitorar.
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/010.png" width="400">
+</p>
+
+### Pronto!
+
+Você será avisado (a) sempre que alguém acessar o repositório através do seu canal do Slack!
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/011.jpeg" width="400">
+</p>
