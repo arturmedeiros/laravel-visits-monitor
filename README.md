@@ -14,14 +14,14 @@
 
 Já pensou em ser avisado sempre que alguém acessar o seu GitHub? Com essa aplicação OpenSource você recebe notificações via Slack sempre que tiver um novo visitante!
 
-Basta possuir uma conta no Slack e seguir os passos à seguir.
+Basta possuir uma conta no [Slack](https://slack.com/) e seguir os passos à seguir.
 
 
 <p align="center">
 <img src="https://raw.githubusercontent.com/arturmedeiros/laravel-visits-monitor/master/public/IMGS/012.png" width="100%">
 </p>
 
-## Live Project
+## 🌎 Live Project
 Para instalar o Monitor de Visitas ao seu perfil do GitHub, basta colar o código que geramos na [ nossa página](https://visits-monitor.herokuapp.com/). Veja abaixo como utilizar.
 
 ### 1) Criando um novo canal no Slack
