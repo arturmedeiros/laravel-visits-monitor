@@ -16,8 +16,19 @@ class ApiController extends Controller
         $this->request = $request;
     }
 
-    public function tracking_github($webhook)
+    public function tracking_github($username, $webhook)
     {
+        if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+            $url = "https://";
+        else
+            $url = "http://";
+        // Append the host(domain name, ip) to the URL.
+        $url.= $_SERVER['HTTP_HOST'];
+
+        // Append the requested resource location to the URL
+        $url.= $_SERVER['REQUEST_URI'];
+
+        //dd($_SERVER['REQUEST_URI']);
 
         $url = "https://hooks.slack.com/services/" . $webhook;
         $response = null;
@@ -37,7 +48,7 @@ class ApiController extends Controller
                     "type" => "section",
                     "text" => [
                     "type" => "plain_text",
-                        "text" => "You have a new visit on GitHub",
+                        "text" => "You have a new visit on GitHub: @" . $username,
                         "emoji" => true
                     ]
                 ],
@@ -70,7 +81,7 @@ class ApiController extends Controller
             ]
         ];
 
-        /*dd($webhook, $url);*/
+        dd($webhook, $url);
         try {
 
             Http::retry(3, 1000)->post($url, $data);
