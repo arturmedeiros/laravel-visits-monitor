@@ -59,7 +59,7 @@ class ApiController extends Controller
                     "fields" => [
                         [
                             "type" => "mrkdwn",
-                            "text" => "*Hosting by:*\n<https://heroku.com/|Heroku>"
+                            "text" => "*Hosting by:*\n<https://github.arjos.com.br/|ARJOS - Web Development>"
                         ],
                         [
                             "type" => "mrkdwn",
