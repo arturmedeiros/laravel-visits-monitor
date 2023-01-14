@@ -46,7 +46,7 @@ class ApiController extends Controller
                     "fields" => [
                         [
                             "type" => "mrkdwn",
-                            "text" => "*Time:*\n" . now()->format('H:i')
+                            "text" => "*Time:*\n" . now()->format('H:i') . " UTC"
                         ],
                         [
                             "type" => "mrkdwn",
