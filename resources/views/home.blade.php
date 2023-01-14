@@ -228,6 +228,7 @@
             el: "#app",
             data(){
                 return {
+                    username: null,
                     webhook: null,
                     code: null,
                     input: null,
@@ -239,7 +240,7 @@
                 setCode(){
                     let result = null
                     if(this.webhook) {
-                        result = `<img width="1px" height="1px" src="https://github.arjos.com.br/tracking/img/${this.webhook}.png">`
+                        result = `<img width="1px" height="1px" src="https://github.arjos.com.br/tracking/img/${this.username ?? 'none'}/${this.webhook}.png">`
                     }
                     return result
                 }
