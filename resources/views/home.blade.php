@@ -239,7 +239,7 @@
                 setCode(){
                     let result = null
                     if(this.webhook) {
-                        result = `<img width="1px" height="1px" src="https://visits-monitor.herokuapp.com/github/${this.webhook}.png">`
+                        result = `<img width="1px" height="1px" src="https://github.arjos.com.br/tracking/img/${this.webhook}.png">`
                     }
                     return result
                 }
