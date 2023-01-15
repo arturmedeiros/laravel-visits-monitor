@@ -48,7 +48,7 @@ class ApiController extends Controller
                     "type" => "section",
                     "text" => [
                     "type" => "plain_text",
-                        "text" => "You have a new visit on GitHub:" . "<https://github.com/$username|$username>",
+                        "text" => "You have a new visit on GitHub: @" . $username,
                         "emoji" => true
                     ]
                 ],
