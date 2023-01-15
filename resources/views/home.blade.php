@@ -161,25 +161,45 @@
         </div>
 
         <div v-if="!setCode" class="form-label-group">
+            <input v-model="username"
+                   @keyup="validateInputGithub()"
+                   type="text"
+                   id="inputGithub"
+                   class="form-control"
+                   placeholder="Exemplo: arturmedeiros"
+                   required
+                   autofocus>
+            <label for="inputGithub">Username do GitHub</label>
+        </div>
+        <div v-if="!setCode" class="form-label-group">
             <input v-model="input"
                    @keyup="validateInput()"
                    type="text"
                    id="inputWebhook"
                    class="form-control"
-                   placeholder="Webhook do Slac"
+                   placeholder="Webhook do Slack"
                    required
                    autofocus>
             <label for="inputWebhook">Webhook do Slack</label>
         </div>
-        <button v-if="!error && !setCode"
+        <button v-if="!error && !error_username && !setCode"
                 @click="createWebhook()"
+                :disabled="error_username || !input"
                 class="btn btn-lg btn-primary btn-block">Gerar código da imagem!</button>
         <button v-if="error" class="btn disabled btn-lg text-black btn-warning btn-block">Webhook inválido!</button>
+        <button v-if="error_username" class="btn disabled btn-lg text-black btn-warning btn-block">Username inválido!</button>
 
         <div v-if="error" class="mt-3 mb-3 text-muted text-center">
             <div class="mb-3">Exemplo de Webhook:</div>
             <div class="alert alert-danger">
                 <code>https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX</code>
+            </div>
+        </div>
+        <div v-if="error_username" class="mt-3 mb-3 text-muted text-center">
+            <div class="alert alert-alert">
+                <code>
+                    Não utilize a url completa, apenas o nome de usuário, sem o @
+                </code>
             </div>
         </div>
         <div v-if="setCode && !error"
@@ -228,11 +248,12 @@
             el: "#app",
             data(){
                 return {
-                    username: null,
+                    username: "",
                     webhook: null,
                     code: null,
                     input: null,
                     error: null,
+                    error_username: null,
                     copy: false
                 }
             },
@@ -269,6 +290,27 @@
                     } else {
                         this.error = false
                     }
+                },
+                validateInputGithub(){
+                    if(!this.username || this.username === '') {
+                        this.error_username = true
+                    }
+                    // Verifica se possui @
+                    else if(this.username.indexOf("@") !== -1) {
+                        this.error_username = true
+                    }
+                    // Verifica se possui url
+                    else if(this.username.indexOf("http") !== -1) {
+                        this.error_username = true
+                    }
+                    // Verifica se possui url
+                    else if(this.username.indexOf(".github.com") !== -1) {
+                        this.error_username = true
+                    }
+                    else {
+                        this.error_username = false
+                    }
+                    this.error = false
                 },
                 copyCode(){
                     let copyText = this.setCode;
